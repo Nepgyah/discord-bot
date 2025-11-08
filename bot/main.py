@@ -2,6 +2,7 @@ import os
 import discord
 from dotenv import load_dotenv
 
+# Standard import of enviornments variables (i.e secret keys, settings, etc)
 dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
 load_dotenv(dotenv_path)
 TOKEN = os.getenv("PUBLIC_KEY")
@@ -9,6 +10,7 @@ TOKEN = os.getenv("PUBLIC_KEY")
 intents = discord.Intents.default()
 intents.message_content = True
 
+# Create a instance of the client
 client = discord.Client(intents=intents)
 
 @client.event
